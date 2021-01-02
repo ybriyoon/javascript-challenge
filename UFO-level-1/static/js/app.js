@@ -12,8 +12,8 @@ tableData.forEach(data => {
 });
 
 // Listen for events and search through the `date/time`
-const button = d3.select("#filter-btn");
-var reset = d3.select("#reset-btn");
+var button = d3.select("#filter-btn");
+// var reset = d3.select("#reset-btn");
 
 button.on("click", function() {
   var date_input = d3.select("#datetime");
@@ -36,3 +36,28 @@ button.on("click", function() {
     tbody.append("h5").text("No sightings on the entered date.");
   }
 });
+
+// // reset table to original display
+// function resetData(){
+//     // Prevent the page from refreshing
+//     d3.event.preventDefault();
+
+//     // reset the form
+//     document.forms['ufo-form'].reset()
+
+//     // flag that table is not filtered
+//     filtered = 0;
+
+//     // wipe out the tbody to be able to write out new table
+//     tbody.html("");
+
+//     // fill in observations only where date matches user input
+//     tableData.forEach(row => {
+//         tbody.append("tr");
+    
+//         for (key in row){
+//             const cell = tbody.append("td");
+//             cell.text(row[key]);
+//         }
+//     });
+// }
