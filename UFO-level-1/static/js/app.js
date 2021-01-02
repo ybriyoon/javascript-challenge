@@ -13,7 +13,6 @@ tableData.forEach(data => {
 
 // Listen for events and search through the `date/time`
 var button = d3.select("#filter-btn");
-// var reset = d3.select("#reset-btn");
 
 button.on("click", function() {
   var date_input = d3.select("#datetime");
